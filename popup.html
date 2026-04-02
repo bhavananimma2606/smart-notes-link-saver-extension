@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Buddy</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        width: 280px; /* Slightly wider for better readability */
+        padding: 15px;
+        background: linear-gradient(135deg, #b41ecb 0%, #0f172a 100%);
+        color: #FFFFFF; /* Soft White Text */
+    }
+    
+    h2, h3 {
+        color: #38bdf8; /* Cyan accent for titles */
+        margin-top: 0;
+    }
+
+    textarea, input {
+        width: 100%;
+        background-color: #FFFFFF; /* Dark Slate input bg */
+        border: 1px solid #e5f0ff;
+        border-radius: 6px;
+        color: #000000;
+        padding: 8px;
+        box-sizing: border-box; /* Ensures padding doesn't break width */
+    }
+
+    textarea {
+        height: 150px;
+
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin-right: 5px;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: opacity 0.2s;
+    }
+
+    /* Specific Button Colors */
+    #saveBtn, #addLinkBtn {
+        background-color: #c3177b; /* Indigo */
+        color: white;
+    }
+
+    #clearBtn {
+        background-color: #b57339; /* Muted Slate */
+        color: white;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 8px;
+        background: #15bdd0;
+        padding: 6px 10px;
+        border-radius: 4px;
+        border-left: 4px solid #299b2f;
+        font-size: 13px;
+    }
+
+    #status {
+        color: #170101; /* Green for success messages */
+        font-size: 12px;
+    }
+</style>
+</head>
+<body>
+    <h2>My Buddy</h2>
+
+    <textarea id="notes" placeholder="Quick notes..."></textarea>
+    
+    <div class="btn-group">
+        <button id="saveBtn">Save Note</button>
+        <button id="clearBtn">Clear</button>
+        <button id="saveTabBtn">Save Current Tab</button>
+    </div>
+    
+    <p id="status"></p>
+
+    <h3>Links</h3>
+    <input type="text" id="linkInput" placeholder="https://...">
+    <button id="addLinkBtn">Add to List</button>
+    <input id="searchInput" placeholder="Search links..."/>
+    <ul id="linksList">
+        </ul>
+
+    <script src="popup.js"></script> 
+</body>
+</html>

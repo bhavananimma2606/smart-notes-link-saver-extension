@@ -23,3 +23,14 @@ How to Use
 3. Save your current tab  
 4. Search anything easily  
 Think of it like your small digital buddy that remembers things for you.
+
+Screenshots
+
+1.Notes & Main UI
+![Notes](Screenshot 2026-04-03 002132.png)
+
+2.Saved Links
+![Links](Screenshot 2026-04-03 002452.png)
+
+3.Search Feature
+![Search](Screenshot 2026-04-03 002512.png)

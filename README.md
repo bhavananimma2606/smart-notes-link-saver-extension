@@ -27,10 +27,10 @@ Think of it like your small digital buddy that remembers things for you.
 Screenshots
 
 1.Notes & Main UI
-![Notes](Screenshot 2026-04-03 002132.png)
+![Notes](notes.png)
 
 2.Saved Links
-![Links](Screenshot 2026-04-03 002452.png)
+![Links](links.png)
 
 3.Search Feature
-![Search](Screenshot 2026-04-03 002512.png)
+![Search](search.png)

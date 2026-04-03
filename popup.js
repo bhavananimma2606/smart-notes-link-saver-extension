@@ -133,18 +133,28 @@ document.addEventListener("DOMContentLoaded", () => {
     a.target = "_blank";
 
     const delBtn = document.createElement("button");
+    const editBtn=document.createElement("button");
+    editBtn.textContent="Edit";
     delBtn.textContent = "Remove";
+    
+    editBtn.addEventListener("click",() => {
+      const newLink=prompt("Edit your link:",link);
 
+      if(newLink && newLink.startsWith("http")){
+        updateLink(index,newLink);
+      }
+    });
     delBtn.addEventListener("click", () => {
       deleteLink(index);
     });
 
     li.appendChild(a);
+    li.appendChild(editBtn);
     li.appendChild(delBtn);
     linksList.appendChild(li);
   }
 
-  // ================= DELETE LINK =================
+  //================= DELETE LINK =================
 
   function deleteLink(index) {
     chrome.storage.local.get(["myLinks"], (result) => {
@@ -155,6 +165,21 @@ document.addEventListener("DOMContentLoaded", () => {
       chrome.storage.local.set({ myLinks: links }, () => {
         linksList.innerHTML = "";
         links.forEach((link, i) => addLinkToUI(link, i));
+      });
+    });
+  }
+
+  //================= UPDATE LINK =================
+
+  function updateLink(index,newLink){
+    chrome.storage.local.get(["myLinks"],(result) => {
+      let links=result.myLinks||[];
+      links[index]=newLink;
+      chrome.storage.local.set({myLinks:links},() => {
+        linksList.innerHTML="";
+        links.forEach((link,i) => {
+          addLinkToUI(link,i);
+        });
       });
     });
   }

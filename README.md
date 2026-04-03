@@ -9,7 +9,8 @@ What My Buddy can do
 -  Save your current tab instantly  
 -  Delete links anytime  
 -  Search through saved links  
--  Prevent invalid inputs  
+-  Prevent invalid inputs
+-  Edit saved links
 
 Built With
 - HTML  
@@ -27,10 +28,28 @@ Think of it like your small digital buddy that remembers things for you.
 Screenshots
 
 1.Notes & Main UI
+
+
+
 ![Notes](notes.png)
 
 2.Saved Links
+
+
+
 ![Links](links.png)
 
 3.Search Feature
+
+
+
+
 ![Search](search.png)
+
+4.Edit links
+
+
+
+
+![Editlinks](editlink.png)
+![Editlinks](editlink2.png)
